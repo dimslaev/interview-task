@@ -1,0 +1,124 @@
+.company-card {
+  border-radius: 0;
+
+  &:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 0;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .toggle-btn {
+      display: flex;
+      align-items: center;
+      padding: 0;
+
+      .fa {
+        font-size: 0.5rem;
+        margin-right: 1.25rem;
+        width: 0.5rem;
+        color: #999;
+      }
+
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      margin: 0;
+      font-weight: normal;
+      color: #212529;
+
+      &.ml {
+        margin-left: 1.825rem;
+      }
+    }
+
+    .more-btn {
+      height: 1.5rem;
+      width: 1.5rem;
+      padding: 0;
+      font-size: 0.5rem;
+      margin-left: auto;
+    }
+  }
+
+  .card-body {
+    padding: 0;
+  }
+
+  .list-group {
+    margin: -1px;
+
+    h5 {
+      font-size: 0.85rem;
+      letter-spacing: 0.4px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #999;
+    }
+
+    b {
+      margin-right: 0.5rem;
+      font-weight: normal;
+    }
+
+    &-item {
+      padding-left: 3rem;
+
+      &:first-child {
+        border-radius: 0;
+      }
+    }
+
+    .col-first {
+      flex-basis: 150px;
+      flex-grow: 0;
+    }
+
+    .employees {
+      margin-bottom: 0.25rem;
+      span:not(:last-child) {
+        &:after {
+          content: ", ";
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .card-header {
+      .more-btn {
+        width: 1.75rem;
+        height: 1.75rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+    }
+
+    .list-group {
+      .col-first {
+        flex-basis: 100%;
+      }
+    }
+  }
+}

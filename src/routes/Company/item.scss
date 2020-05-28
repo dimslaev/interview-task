@@ -1,0 +1,161 @@
+.project-card {
+  border-radius: 0;
+
+  &:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 0;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .toggle-btn {
+      display: flex;
+      align-items: center;
+      padding: 0;
+
+      h3 {
+        font-size: 1.15rem;
+        margin: 0;
+        font-weight: normal;
+      }
+
+      .fa {
+        font-size: 0.5rem;
+        margin-right: 1.25rem;
+        color: #999;
+      }
+
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .card-body {
+    padding: 0;
+
+    h5 {
+      font-size: 0.85rem;
+      letter-spacing: 0.4px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #999;
+    }
+  }
+
+  .list-group {
+    margin: -1px;
+
+    &-item {
+      border-radius: 0;
+      padding-left: 3rem;
+
+      p {
+        line-height: 2rem;
+        margin: 0;
+      }
+    }
+  }
+
+  .btn-sm {
+    height: 2rem;
+    color: #007bff;
+    position: relative;
+    top: -1px;
+
+    .text {
+      font-size: 1rem;
+    }
+  }
+
+  .add-btn {
+    padding-left: 0;
+    .fa {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .edit-btn {
+    color: #007bff;
+    font-size: 0.725rem;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+
+    .start-btn {
+      font-size: 0.75rem;
+    }
+
+    &-text {
+      position: relative;
+      overflow: hidden;
+      min-width: 160px;
+
+      input {
+        position: absolute;
+        left: -9999px;
+        z-index: 1;
+        padding: 0;
+        border: 0;
+
+        &:focus {
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+    }
+
+    &.is-started {
+      .title-text {
+        input {
+          left: 0;
+        }
+
+        .text {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  .add-employees {
+    select {
+      display: none;
+      min-width: 160px;
+    }
+
+    &.is-started {
+      select {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .card-header {
+      .toggle-btn {
+        h3 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

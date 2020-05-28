@@ -1,0 +1,25 @@
+.editable {
+  display: flex;
+  align-items: center;
+
+  .start-btn {
+    .text {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .cancel-btn,
+  .submit-btn {
+    display: none;
+  }
+
+  &.is-started {
+    .start-btn {
+      display: none;
+    }
+    .cancel-btn,
+    .submit-btn {
+      display: block;
+    }
+  }
+}
